@@ -1,0 +1,20 @@
+format: jb-book
+root: docs/index
+parts:
+- caption: Introducción a Python
+  numbered: True
+  chapters:
+  - file: docs/python/1_principios.rst
+  - file: docs/python/2_variables.rst
+  - file: docs/python/3_loops.rst
+  - file: docs/python/4_funciones.rst
+  - file: docs/python/5_ecuaciones.md
+
+- caption: Nociones de Macroeconomía
+  numbered: True
+  chapters:
+  - file: docs/part_2/dasa.rst
+  - file: docs/part_2/is.md
+  - file: docs/part_2/ch2.md
+  - file: docs/part_2/equilibrium.md
+  - file: docs/part_2/solow.md

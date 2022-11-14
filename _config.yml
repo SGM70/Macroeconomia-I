@@ -1,0 +1,80 @@
+title : Macroeconomía Cuantitativa
+author: Samuel Gil
+logo: '_static/logo.jpg'
+
+# Short description about the book
+description: 
+
+execute:
+  execute_notebooks           : off
+
+# HTML-specific settings
+html:
+  home_page_in_navbar         : true
+  html_favicon : "_static/logo.jpg"
+
+# Interact link settings
+notebook_interface            : "notebook"
+
+# Launch button settings
+repository:
+  url                         : https://github.com/executablebooks/quantecon-mini-example
+
+binder:
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Binder"
+
+launch_buttons:
+  notebook_interface : "classic"
+
+# LaTeX settings
+bibtex_bibfiles:
+   - _bibliography/references.bib
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
+
+extensions: [
+            'myst-parser',\
+            'sphinx_copybutton',\
+            'myst_nb', \
+            'sphinx_comments',\
+            'sphinx.ext.intersphinx',\
+            'sphinxcontrib.bibtex',\
+            'nbsphinx'
+]
+
+tikz_proc_suite: 'GhostScript'
+tikz_includegraphics_path: '_static/tikz'
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - dollarmath
+    - smartquotes
+    - substitution
+    - colon_fence
+
+sphinx:
+  extra_extensions: 
+    - sphinx_multitoc_numbering
+    - sphinx_jupyterbook_latex
+    - sphinxcontrib.tikz
+    - sphinx_exercise
+    - sphinx_togglebutton
+    - sphinx_inline_tabs
+    - sphinx_external_toc
+    - myst_nb
+    #- sphinx_panels
+
+  config:
+    html_theme: quantecon_book_theme
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    latex_elements: 
+      extra_packages: \usepackage[dvips]{xcolor}
+
+tikz_proc_suite: 'GhostScript'
+tikz_includegraphics_path: '_static/tikz'
